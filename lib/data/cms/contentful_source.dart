@@ -82,7 +82,7 @@ class ContentfulEventSource implements EventSource {
         title: fields['title'] as String? ?? '',
         startsAt: DateTime.parse(fields['startsAt'] as String),
         venue: fields['venue'] as String? ?? '',
-        description: fields['description'] as String,
+        description: fields['description'] as String? ?? '',
         cancelled: fields['cancelled'] as bool? ?? false,
       );
     }).toList();
